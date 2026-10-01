@@ -93,6 +93,12 @@ const RULES = [
     why: "phone number with country code",
     regex: /\+\d{2}\s?\d{6,12}\b/g,
   },
+  {
+    id: "no-mobile",
+    why: "Norwegian mobile number (bare 8-digit 4xx/9xx)",
+    regex: /\b(?:4[0-9]|9[0-9])\d{6}\b/g,
+    accept: (match) => !/^(\d)\1{7}$/.test(match),
+  },
   { id: "jwt", why: "JWT", regex: /\beyJ[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{4,}/g },
   {
     id: "cashu-token",
