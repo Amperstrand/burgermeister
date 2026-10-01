@@ -1,0 +1,37 @@
+{
+  "name": "burgermeister",
+  "version": "0.1.0",
+  "description": "Read-only Burgermeister table-ordering client. Fetches a venue menu from a public QR code. Does not place orders or take payment.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "test": "vitest run",
+    "gate": "node scripts/leak-scan.mjs ."
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "typescript": "~6.0.3",
+    "vitest": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amperstrand/burgermeister.git"
+  }
+}

@@ -1,0 +1,16 @@
+# because: "hunter2" is the canonical fake password, used by the redaction module's own tests to prove redaction works — no real credential
+secret-key:staging/core/test/redact.test.ts
+# because: same synthetic value, logger redaction coverage test
+secret-key:staging/core/test/logger.test.ts
+# because: the purge plan cites the synthetic Norwegian test plates it tells a human to review (AB12345/CD67890 are data references, not credentials)
+no-plate:plans/
+# because: the purge plan cites the phone placeholder it recommends as the rewrite target
+phone:plans/
+# because: the purge plan cites the O-W-2021 false-positive it flags for review
+de-plate:plans/
+# because: this file's own justifications must quote the Norwegian plate literals they describe
+no-plate:scripts/leak-scan-allowlist.txt
+# because: this file's own justifications must quote the phone placeholder they describe
+phone:scripts/leak-scan-allowlist.txt
+# because: this file's own justifications must quote the plate-format false positive they describe
+de-plate:scripts/leak-scan-allowlist.txt
