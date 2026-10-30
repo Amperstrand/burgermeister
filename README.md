@@ -1,3 +1,6 @@
+> [!WARNING]
+> **Superseded by [Amperstrand/jamezz](https://github.com/Amperstrand/jamezz)** — the same client, evolved: typed errors, client-owned sessions, the v2.0 order-shape fixes, CLI, venue catalog, offline fakes, and prompts. This repo stays read-only for history; all new work happens in jamezz.
+
 # burgermeister
 
 Read-only client for Burgermeister table ordering.
